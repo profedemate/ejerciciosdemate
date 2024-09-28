@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Lenguaje Algebraico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            height: 90%;
+            overflow-y: auto;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .exercise {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ejercicios de Lenguaje Algebraico</h1>
+
+    <!-- Ejercicio 1 -->
+    <div class="exercise">
+        <p><strong>1. El doble de un número más 5</strong></p>
+        <input type="text" id="respuesta1" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(1, '2x+5')">Verificar</button>
+        <p id="resultado1"></p>
+    </div>
+
+    <!-- Ejercicio 2 -->
+    <div class="exercise">
+        <p><strong>2. El triple de un número menos 7</strong></p>
+        <input type="text" id="respuesta2" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(2, '3x-7')">Verificar</button>
+        <p id="resultado2"></p>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="exercise">
+        <p><strong>3. Cinco veces un número menos 3</strong></p>
+        <input type="text" id="respuesta3" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(3, '5x-3')">Verificar</button>
+        <p id="resultado3"></p>
+    </div>
+
+    <!-- Ejercicio 4 -->
+    <div class="exercise">
+        <p><strong>4. La mitad de un número más 6</strong></p>
+        <input type="text" id="respuesta4" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(4, 'x/2+6')">Verificar</button>
+        <p id="resultado4"></p>
+    </div>
+
+    <!-- Ejercicio 5 -->
+    <div class="exercise">
+        <p><strong>5. La tercera parte de un número menos 8</strong></p>
+        <input type="text" id="respuesta5" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(5, 'x/3-8')">Verificar</button>
+        <p id="resultado5"></p>
+    </div>
+
+    <!-- Ejercicio 6 -->
+    <div class="exercise">
+        <p><strong>6. Cuatro veces un número más 9</strong></p>
+        <input type="text" id="respuesta6" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(6, '4x+9')">Verificar</button>
+        <p id="resultado6"></p>
+    </div>
+
+    <!-- Ejercicio 7 -->
+    <div class="exercise">
+        <p><strong>7. El cuadrado de un número menos 10</strong></p>
+        <input type="text" id="respuesta7" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(7, 'x^2-10')">Verificar</button>
+        <p id="resultado7"></p>
+    </div>
+
+    <!-- Ejercicio 8 -->
+    <div class="exercise">
+        <p><strong>8. El doble de un número más su cuadrado</strong></p>
+        <input type="text" id="respuesta8" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(8, '2x+x^2')">Verificar</button>
+        <p id="resultado8"></p>
+    </div>
+
+    <!-- Ejercicio 9 -->
+    <div class="exercise">
+        <p><strong>9. La suma de un número y el triple de ese número</strong></p>
+        <input type="text" id="respuesta9" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(9, 'x+3x')">Verificar</button>
+        <p id="resultado9"></p>
+    </div>
+
+    <!-- Ejercicio 10 -->
+    <div class="exercise">
+        <p><strong>10. El doble de un número menos la tercera parte del mismo número</strong></p>
+        <input type="text" id="respuesta10" placeholder="Escribe aquí...">
+        <button onclick="verificarRespuesta(10, '2x-x/3')">Verificar</button>
+        <p id="resultado10"></p>
+    </div>
+
+</div>
+
+<script>
+    function verificarRespuesta(ejercicio, respuestaCorrecta) {
+        const respuesta = document.getElementById('respuesta' + ejercicio).value.replace(/\s+/g, '');
+        
+        if (respuesta === respuestaCorrecta) {
+            document.getElementById('resultado' + ejercicio).innerHTML = "¡Correcto! La expresión es: " + respuestaCorrecta;
+            document.getElementById('resultado' + ejercicio).style.color = "green";
+        } else {
+            document.getElementById('resultado' + ejercicio).innerHTML = "Incorrecto. Inténtalo de nuevo.";
+            document.getElementById('resultado' + ejercicio).style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
